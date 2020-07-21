@@ -1,4 +1,11 @@
 @charset "UTF-8";
+@font-face {
+  font-family: "WebSymbolsRegular";
+  src: url(fonts/websymbols-regular-webfont.eot);
+  src: url(fonts/websymbols-regular-webfont.eot?iefix) format("embedded-opentype"), url(fonts/websymbols-regular-webfont.woff) format("woff"), url(fonts/websymbols-regular-webfont.ttf) format("truetype"), url(fonts/websymbols-regular-webfont.svg#WebSymbolsRegular) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 * {
   margin: 0;
   padding: 0;
@@ -16,11 +23,6 @@ body {
   font-size: 1.5rem;
 }
 
-.wrap {
-  width: 1250px;
-  margin: 0px auto;
-}
-
 a {
   color: #529125;
   text-decoration: none;
@@ -35,105 +37,136 @@ a:hover {
 }
 
 #header {
-  display: block;
+  display: flex;
   width: 100%;
-  height: 150px;
+  height: 60px;
   align-items: center;
   justify-content: center;
   flex-direction: row;
 }
 #header #logo {
   display: flex;
-  width: 100%;
+  width: 30%;
   height: 100%;
   align-items: center;
-  justify-content: center;
-  letter-spacing: 0.8rem;
-  background-image: url("../img/Webp.net-resizeimage.jpg");
-  background-size: 100% 100%;
-  border: 1px solid #ccc;
+  justify-content: left;
+  letter-spacing: 0.3rem;
+  cursor: pointer;
 }
 #header #logo img {
-  width: 7.5rem;
-  height: 10rem;
-  margin-right: 4rem;
+  width: 4rem;
+  height: 6rem;
+  margin-right: 2rem;
 }
 #header #logo h3 {
   justify-content: center;
   color: white;
+  font-size: 1rem;
+  padding-top: 0.7rem;
 }
-
-#menu {
-  width: 100%;
+#header #menu {
+  display: flex;
+  width: 65%;
   height: 40px;
-  background-color: #333333;
   color: white;
   font-family: sans-serif, Helvetica, Arial;
-  font-size: 14px;
-  box-shadow: 0px 0px 2px gray;
+  font-size: 1.4rem;
+}
+#header #menu ul {
+  overflow: hidden;
+  list-style: none;
+  text-decoration: none;
+  width: 100%;
+}
+#header #menu > ul > li {
+  line-height: 40px;
+  float: left;
+  margin: 0px 10px;
+  transition: all 300ms;
+}
+#header #menu > ul > li > a {
+  display: block;
+  color: white;
+  text-decoration: none;
+}
+#header #menu > ul > li:hover > a {
+  text-decoration: underline;
+}
+#header .icon {
+  font-family: "WebSymbolsRegular";
+  cursor: pointer;
+}
+
+/*#menu {
+    width: 100%;
+    height: 40px;
+    background-color: #333333;
+    color: white;
+    font-family: sans-serif, Helvetica, Arial;
+    font-size: 14px;
+    box-shadow: 0px 0px 2px gray;
 }
 
 #menu ul {
-  list-style: none;
-  text-decoration: none;
-  margin: 0px auto;
-  width: 1090px;
+    list-style: none;
+    text-decoration: none;
+    margin: 0px auto;
+    width: 1090px;
 }
 
 #menu > ul > li {
-  line-height: 40px;
-  float: left;
-  border-right: 1px solid gray;
-  transition: all 300ms;
+    line-height: 40px;
+    float: left;
+    border-right: 1px solid gray;
+    transition: all 300ms;
 }
 
 #menu > ul > li > a {
-  display: block;
-  padding-left: 20px;
-  padding-right: 20px;
-  color: white;
-  text-decoration: none;
+    display: block;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+    text-decoration: none;
 }
 
 #menu > ul > li > a:first-child {
-  border-left: 1px solid gray;
+    border-left: 1px solid gray;
 }
 
 #menu > ul > li:hover {
-  background-color: #70B231;
-  box-shadow: 0px 0px 4px green inset;
-}
-
+    background-color: #70B231;
+    box-shadow: 0px 0px 4px green inset;
+}*/
 /*MENU DESPLEGABLE*/
-#menu > ul > li > ul {
-  display: none;
-  position: absolute;
-  width: 160px;
-  box-shadow: 0px 2px 2px gray;
-  z-index: 1;
+/*#menu > ul > li > ul {
+    display: none;
+    position: absolute;
+    width: 160px;
+    box-shadow: 0px 2px 2px gray;
+    z-index: 1;
 }
 
 #menu > ul > li:hover > ul {
-  display: block;
+    display: block;
 }
 
 #menu > ul > li:hover > ul > li {
-  background-color: #F2F1F0;
-  border-bottom: 1px solid #D6D6D6;
-  padding: 8px;
-  line-height: 25px;
-  font-size: 13px;
-  transition: all 300ms;
+    background-color: #F2F1F0;
+    border-bottom: 1px solid #D6D6D6;
+    padding: 8px;
+    line-height: 25px;
+    font-size: 13px;
+    transition: all 300ms;
 }
 
 #menu > ul > li:hover > ul > li a {
-  text-decoration: none;
-  color: #666666;
+    text-decoration: none;
+    color: #666666;
 }
 
 #menu > ul > li:hover > ul > li:hover {
-  box-shadow: 0px 0px 6px #ccc inset;
-  background-color: #eeeded;
-}
+    box-shadow: 0px 0px 6px #ccc inset;
+    background-color: rgb(238, 237, 237);
+}*/
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,3 +1,14 @@
+@font-face {
+    font-family: "WebSymbolsRegular";
+    src: url(fonts/websymbols-regular-webfont.eot);
+    src: url(fonts/websymbols-regular-webfont.eot?iefix) format('embedded-opentype'),
+        url(fonts/websymbols-regular-webfont.woff) format('woff'),
+        url(fonts/websymbols-regular-webfont.ttf) format('truetype'),
+        url(fonts/websymbols-regular-webfont.svg#WebSymbolsRegular) format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -14,15 +25,9 @@ body {
     font-size: 1.5rem;
 }
 
-.wrap {
-    width: 1250px;
-    margin: 0px auto;
-}
-
 a {
     color: #529125;
     text-decoration: none;
-
 }
 
 a:visited {
@@ -36,38 +41,76 @@ a:hover {
 }
 
 #header {
-    display: block;
+    display: flex;
     width: 100%;
-    height: 150px;
+    height: 60px;
     align-items: center;
     justify-content: center;
     flex-direction: row;
 
     #logo {
         display: flex;
-        width: 100%;
+        width: 30%;
         height: 100%;
         align-items: center;
-        justify-content: center;
-        letter-spacing: .8rem;
-        background-image: url('../img/Webp.net-resizeimage.jpg');
-        background-size: 100% 100%;
-        border: 1px solid #ccc;
+        justify-content: left;
+        letter-spacing: .3rem;
+        cursor: pointer;
 
         img {
-            width: 7.5rem;
-            height: 10rem;
-            margin-right: 4rem;
+            width: 4rem;
+            height: 6rem;
+            margin-right: 2rem;
         }
 
         h3 {
             justify-content: center;
             color: white;
+            font-size: 1rem;
+            padding-top: .7rem;
         }
-    }    
+    }
+    
+    #menu {
+        display: flex;
+        width: 65%;
+        height: 40px;
+        color: white;
+        font-family: sans-serif, Helvetica, Arial;
+        font-size: 1.4rem;
+    
+        ul {
+            overflow: hidden;
+            list-style: none;
+            text-decoration: none;
+            width: 100%;
+        }
+    }
+
+    #menu > ul > li {
+        line-height: 40px;
+        float: left;
+        margin: 0px 10px;
+        transition: all 300ms;
+    }
+
+    #menu > ul > li > a {
+        display: block;
+        color: white;
+        text-decoration: none;
+    }
+
+    #menu > ul > li:hover > a {
+        text-decoration: underline;
+    }
+
+    .icon {
+        font-family: "WebSymbolsRegular";
+        cursor: pointer;
+    }
 }
 
-#menu {
+/*#menu {
     width: 100%;
     height: 40px;
     background-color: #333333;
@@ -106,11 +149,11 @@ a:hover {
 #menu > ul > li:hover {
     background-color: #70B231;
     box-shadow: 0px 0px 4px green inset;
-}
+}*/
 
 /*MENU DESPLEGABLE*/
 
-#menu > ul > li > ul {
+/*#menu > ul > li > ul {
     display: none;
     position: absolute;
     width: 160px;
@@ -139,6 +182,6 @@ a:hover {
 #menu > ul > li:hover > ul > li:hover {
     box-shadow: 0px 0px 6px #ccc inset;
     background-color: rgb(238, 237, 237);
-}
+}*/
 
 
