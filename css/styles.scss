@@ -1,3 +1,7 @@
+$base-color: #f7f8f8;
+$header-text-color: #2D818F;
+$base-font: Arial;
+
 @font-face {
     font-family: "WebSymbolsRegular";
     src: url(fonts/websymbols-regular-webfont.eot);
@@ -21,23 +25,22 @@ html {
 }
 
 body {
-    background-color: #ccc;
+    background-color: $base-color;
     font-size: 1.5rem;
+    font-family: $base-font;
 }
 
 a {
-    color: #529125;
+    color: #2D818F;
     text-decoration: none;
 }
 
 a:visited {
-    color: #529125;
-    
+    /*color: #529125;*/
 }
 
 a:hover {
-    color: #285616;
-    
+    /*color: #285616;*/
 }
 
 #header {
@@ -45,7 +48,7 @@ a:hover {
     width: 98%;
     height: 60px;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     flex-direction: row;
 
     #logo {
@@ -65,8 +68,8 @@ a:hover {
 
         h3 {
             justify-content: center;
-            color: white;
-            font-size: 1rem;
+            color: $header-text-color;
+            font-size: 1.6rem;
             padding-top: .7rem;
         }
     }
@@ -75,7 +78,7 @@ a:hover {
         display: flex;
         width: 65%;
         height: 40px;
-        color: white;
+        color: $header-text-color;
         font-family: sans-serif, Helvetica, Arial;
         font-size: 1.4rem;
     
@@ -96,8 +99,8 @@ a:hover {
 
     #menu > ul > li > a {
         display: block;
-        color: white;
         text-decoration: none;
+        font-size: 1.8rem;
     }
 
     #menu > ul > li:hover > a {
@@ -110,78 +113,15 @@ a:hover {
     }
 }
 
-/*#menu {
-    width: 100%;
-    height: 40px;
-    background-color: #333333;
-    color: white;
-    font-family: sans-serif, Helvetica, Arial;
-    font-size: 14px;
-    box-shadow: 0px 0px 2px gray;
+.container {
+    #slider {
+        height: 450px;
+        overflow: hidden;
+    }
+    
+    #slider img {
+        height: 450px;
+    }
 }
-
-#menu ul {
-    list-style: none;
-    text-decoration: none;
-    margin: 0px auto;
-    width: 1090px;
-}
-
-#menu > ul > li {
-    line-height: 40px;
-    float: left;
-    border-right: 1px solid gray;
-    transition: all 300ms;
-}
-
-#menu > ul > li > a {
-    display: block;
-    padding-left: 20px;
-    padding-right: 20px;
-    color: white;
-    text-decoration: none;
-}
-
-#menu > ul > li > a:first-child {
-    border-left: 1px solid gray;
-}
-
-#menu > ul > li:hover {
-    background-color: #70B231;
-    box-shadow: 0px 0px 4px green inset;
-}*/
-
-/*MENU DESPLEGABLE*/
-
-/*#menu > ul > li > ul {
-    display: none;
-    position: absolute;
-    width: 160px;
-    box-shadow: 0px 2px 2px gray;
-    z-index: 1;
-}
-
-#menu > ul > li:hover > ul {
-    display: block;
-}
-
-#menu > ul > li:hover > ul > li {
-    background-color: #F2F1F0;
-    border-bottom: 1px solid #D6D6D6;
-    padding: 8px;
-    line-height: 25px;
-    font-size: 13px;
-    transition: all 300ms;
-}
-
-#menu > ul > li:hover > ul > li a {
-    text-decoration: none;
-    color: #666666;
-}
-
-#menu > ul > li:hover > ul > li:hover {
-    box-shadow: 0px 0px 6px #ccc inset;
-    background-color: rgb(238, 237, 237);
-}*/
 
 
